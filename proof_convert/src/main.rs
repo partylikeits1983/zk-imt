@@ -1,4 +1,3 @@
-use std::env;
 use std::fs::File;
 use std::io::{self, Read};
 
@@ -8,7 +7,7 @@ fn main() -> io::Result<()> {
     let public_input_bytes = 32 * num_public_inputs;
 
     // Read the proof file
-    let mut file = File::open("./proof")?;
+    let mut file = File::open("../hash_preimage/target/proof")?;
     let mut proof_data = Vec::new();
     file.read_to_end(&mut proof_data)?;
 
