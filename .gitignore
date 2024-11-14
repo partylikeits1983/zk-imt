@@ -1,2 +1,15 @@
-.gz
-/target
+# Ignore all directories named .gz at any depth
+**/.gz/
+
+# Ignore all directories named "target" at any depth
+**/target/
+
+# Ignore the "out" directory at the root of the repository
+/out/
+
+# Ignore the "lib" directory at the root of the repository
+/lib/
+
+# Ignore the "cache" directory at the root of the repository
+/cache/
+
