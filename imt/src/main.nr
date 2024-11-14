@@ -55,6 +55,13 @@ fn test_main() {
     }
     let root = hash;
 
+    println(root);
+    println(nullifier_hash);
+    println(nullifier);
+    println(secret);
+    println(proof_siblings);
+    println(proof_path_indices);
+
     // Step 6: Invoke the main function
     main(
         root,

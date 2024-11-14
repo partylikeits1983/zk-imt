@@ -1,22 +1,66 @@
-# zk-imt simplified
+## Foundry
 
-running:
-```
-nargo execute witness
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+
+Foundry consists of:
+
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
 ```
 
-Prove an execution of the Noir program
-```
-bb prove -b ./target/hash_preimage.json -w ./target/witness.gz -o ./target/proof
+### Test
+
+```shell
+$ forge test
 ```
 
-Verify the execution proof
-```
-bb write_vk -b ./target/hash_preimage.json -o ./target/vk
+### Format
+
+```shell
+$ forge fmt
 ```
 
-Generate Solidity verifier:
+### Gas Snapshots
+
+```shell
+$ forge snapshot
 ```
-bb write_vk -b ./target/hash_preimage.json
-bb contract
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
 ```
