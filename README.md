@@ -1,6 +1,21 @@
 # ZK-IMT
 
 
+
+Setting up:
+
+1) Install Noir
+```
+curl -L noirup.dev | bash
+noirup
+```
+
+2) Install Proving Backend:
+```
+curl -L bbup.dev | bash
+bbup
+```
+
 Generate Circuit Data:
 ```
 forge test 
